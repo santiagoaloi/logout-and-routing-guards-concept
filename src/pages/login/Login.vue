@@ -48,7 +48,6 @@
 </template>
 <script setup>
 import { useAuthStore } from '@/stores/authStore'
-import { VCardSubtitle } from 'vuetify/lib/components/index.mjs'
 
 const isPasswordVisible = ref(false)
 const authStore = useAuthStore()

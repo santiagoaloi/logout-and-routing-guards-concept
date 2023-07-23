@@ -3,7 +3,7 @@
     <GSnackbar />
     <LeftDrawer />
     <GAppBar />
-    <RouterView> </RouterView>
+    <RouterView />
   </VApp>
 </template>
 
