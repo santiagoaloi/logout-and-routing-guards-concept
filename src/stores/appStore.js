@@ -7,6 +7,8 @@ export const useAppStore = defineStore('global-application', {
     currentTheme: 'light'
   }),
 
+  persist: true,
+
   getters: {
     isDark: (state) => state.currentTheme === 'dark'
   }
