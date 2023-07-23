@@ -15,7 +15,7 @@ function promptLogout() {
 
   // Check if the user clicked "OK"
   if (shouldLogout) {
-    this.authStore.logout()
+    authStore.logout()
   }
 }
 </script>
