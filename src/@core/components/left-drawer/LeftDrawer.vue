@@ -1,12 +1,5 @@
 <template>
-  <VNavigationDrawer
-    :rail="rail"
-    color="drawer"
-    elevation="7"
-    expand-on-hover
-    rail-width="55"
-    width="260"
-  >
+  <VNavigationDrawer color="drawer" elevation="7" width="260">
     <VList nav>
       <div class="pa-2 mb-3 flex items-center justify-between">
         <RouterLink to="/">
@@ -18,37 +11,28 @@
             </template>
           </VImg>
         </RouterLink>
-
-        <div>
-          <VIcon
-            :icon="rail ? '$radioOff' : '$radioOn'"
-            class="mt-n1 cursor-pointer"
-            color="primary"
-            size="small"
-            @click="rail = !rail"
-          />
-        </div>
       </div>
 
       <VListItem
         v-ripple="false"
         active-color="primary"
         prepend-icon="$mdiHomeOutline"
-        title="Dashboard"
+        title="Homepage"
         to="/"
       />
       <VListItem
+        v-if="authStore.isLoggedIn"
         v-ripple="false"
         active-color="primary"
         prepend-icon="$mdiHomeOutline"
-        title="Playground"
-        to="/playground"
-        @click.stop
+        title="Dashboard"
+        to="/dashboard"
       />
     </VList>
   </VNavigationDrawer>
 </template>
 
 <script setup>
-const rail = ref(false)
+import { useAuthStore } from '@/stores/authStore'
+const authStore = useAuthStore()
 </script>

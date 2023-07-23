@@ -44,10 +44,10 @@
 ```bash
 
 # clone
-git clone https://github.com/santiagoaloi/simple-boilerplate.git
+git clone https://github.com/santiagoaloi/logout-and-routing-guards-concept.git
 
 # enter the project directory
-cd simplesign-refactor
+cd logout-and-routing-guards-concept
 
 # install dependencies
 yarn install

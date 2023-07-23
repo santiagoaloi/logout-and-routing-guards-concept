@@ -1,8 +1,8 @@
 <template>
   <VApp :theme="currentTheme">
-    <!--
-      handles layouts only 
-    -->
+    <GSnackbar />
+    <LeftDrawer />
+    <GAppBar />
     <RouterView> </RouterView>
   </VApp>
 </template>
